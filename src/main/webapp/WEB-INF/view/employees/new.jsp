@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Add new employee</title>
+<link rel="stylesheet" href="/TimesheetManagement/resources/styles.css" type="text/css">
+	
+</head>
+<body>
+	<h2>Add new Employee</h2>
+	<div id="list">
+		<sf:form method="post" action="employees">
+			<ul>
+				<li><label for="name">Name:</label> 
+				<input name="name" id="name" value="${employee.name}" /></li>
+					
+				<li><label for="department">Department:</label> 
+				<input name="department" id="department" value="${employee.department}" /></li>
+				
+				<li><input type="submit" value="Save" id="save" /></li>
+			</ul>
+		</sf:form>
+	</div>
+	<a href="employees">Go Back</a>
+</body>
+</html>
